@@ -1,0 +1,38 @@
+{
+  "repository": {},
+  "description": " ",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "dependencies": {
+    "@react-rxjs/core": "^0.9.6",
+    "@react-rxjs/utils": "^0.9.5",
+    "phoenix": "file:../../../deps/phoenix",
+    "phoenix_html": "file:../../../deps/phoenix_html",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rxjs": "^7.5.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@types/phoenix": "^1.5.4",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "babel-loader": "^8.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^3.0.1",
+    "terser-webpack-plugin": "^2.3.2",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^3.3.2"
+  }
+}
