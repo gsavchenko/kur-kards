@@ -16,9 +16,9 @@ import "phoenix_html"
 
 import React from "react";
 import { createRoot } from 'react-dom/client';
-import Greeter from "./hello";
+import App from "./app";
 
-const container = document.getElementById("greeting");
+const container = document.getElementById("app");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
-root.render(<Greeter name="Phoenix" />);
+root.render(<App />);
