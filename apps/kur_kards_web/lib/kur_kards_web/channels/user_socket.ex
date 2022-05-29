@@ -3,6 +3,7 @@ defmodule KurKardsWeb.UserSocket do
 
   ## Channels
   # channel "room:*", KurKardsWeb.RoomChannel
+  channel "game_room:lobby", KurKardsWeb.GameRoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
