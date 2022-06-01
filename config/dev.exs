@@ -25,7 +25,7 @@ config :kur_kards_web, KurKardsWeb.Endpoint,
       "node_modules/webpack/bin/webpack.js",
       "--mode",
       "development",
-      "--watch-stdin",
+      "--watch",
       cd: Path.expand("../apps/kur_kards_web/assets", __DIR__)
     ]
   ]
