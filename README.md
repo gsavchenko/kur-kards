@@ -19,6 +19,7 @@ We start with an umbrella app because it makes it easier to organize code as the
 
 ## To start the server
 ```
+docker-compose up -d
 mix phx.server
 ```
 You should see the application running at `localhost:4000`
