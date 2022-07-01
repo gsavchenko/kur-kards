@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useChannel from "../common/socket/useChannel.hook";
 
 const Home: NextPage = () => {
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
   useEffect(() => {
     const listener = (event: KeyboardEvent) => {
       if (event.code === "Enter" && gameRoom !== undefined) {
-        console.log("Enter key was pressed. Run your function.");
         event.preventDefault();
         gameRoom.push("shout", { name, message });
       }
@@ -40,26 +39,25 @@ const Home: NextPage = () => {
   }, [name, message, gameRoom]);
 
   const handleMessageSend = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const message = event.target.value;
-    setMessage(message);
+    const newMessage = event.target.value;
+    setMessage(newMessage);
   };
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const name = event.target.value;
-    setName(name);
+    const newName = event.target.value;
+    setName(newName);
   };
 
   return (
     <>
       <div id="message-list" className="row">
-        {messages.map((payload, index) => {
-          return (
-            <div className="row" key={index}>
-              {payload.name || "Anonymous"}:{payload.message}
-              <br />
-            </div>
-          );
-        })}
+        {messages.map((payload, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <div className="row" key={index}>
+            {payload.name || "Anonymous"}:{payload.message}
+            <br />
+          </div>
+        ))}
       </div>
 
       <div className="row form-group">
