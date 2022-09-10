@@ -4,16 +4,13 @@ import React from "react";
 
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => (
+const Lobby: NextPage = () => (
   <div className={styles.main}>
-    <h1>Welcome to Kur Kards!</h1>
-    <Link className={styles.title} href="/lobby">
-      Play Game!
-    </Link>
+    <h1>Lobby</h1>
     <Link className={styles.title} href="/">
-      About
+      Home
     </Link>
   </div>
 );
 
-export default Home;
+export default Lobby;
